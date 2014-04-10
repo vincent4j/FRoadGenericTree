@@ -130,21 +130,22 @@ public class GenericTreeNode<T> {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
+    public boolean equals(Object o) {
+        if (this == o) {
             return true;
         }
 
-        if (obj == null) {
+        if (o == null) {
             return false;
         }
 
-        if (getClass() != obj.getClass()) {
+        if (!(o instanceof GenericTreeNode<?>)) {
             return false;
         }
 
-        GenericTreeNode<?> other = (GenericTreeNode<?>) obj;
-
+        GenericTreeNode<?> other = (GenericTreeNode<?>) o;
+        
+        // 判断标准：只要数据源相同就认为相等，不比较父节点和子节点
         if (data == null) {
             if (other.data != null) {
                 return false;

@@ -47,6 +47,7 @@ public class TreeDemoActivity extends Activity {
             // 获取左右树
             GenericTree<TreeNodeData> treeLeft = DoubleTreeParser.getInstance().getTreeLeft();
             System.out.println(treeLeft.toString());
+            System.out.println("treeLeft.getAllNodesCount() = " + treeLeft.getAllNodesCount());
             GenericTree<TreeNodeData> treeRight = DoubleTreeParser.getInstance().getTreeRight();
             System.out.println(treeRight.toString());
             /**「双树结构」end */

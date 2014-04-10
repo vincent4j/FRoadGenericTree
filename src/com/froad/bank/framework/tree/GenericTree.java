@@ -12,7 +12,7 @@ public class GenericTree<T> {
     private GenericTreeNode<T> root; // 根节点
 
     /**
-     * 所有子节点的个数（包括孙子节点，但不包括自身）
+     * 所有节点的个数（包括孙子节点，也包括自身）
      */
     public int getAllNodesCount() {
         int ret = 0;
@@ -35,7 +35,7 @@ public class GenericTree<T> {
         int ret = node.getChildrenCount();
 
         for (GenericTreeNode<T> child : node.getChildren()) {
-            ret += child.getChildrenCount();
+            ret += getAllNodesCount(child);
         }
 
         return ret;

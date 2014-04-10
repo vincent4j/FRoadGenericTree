@@ -1,5 +1,6 @@
 package com.froad.bank.framework.tree;
 
+
 /**
  * 树的节点数据源
  */
@@ -20,14 +21,22 @@ public class TreeNodeData {
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null) {
+            return false;
+        }
+
         if (!(o instanceof TreeNodeData)) {
             return false;
         }
-        
-        TreeNodeData entity = (TreeNodeData) o;
-        
-        if (id == entity.getId() 
-                && title == entity.getTitle()) {
+
+        TreeNodeData other = (TreeNodeData) o;
+
+        if (id == other.getId() 
+                && title == other.getTitle()) {
             return true;
         }
         
