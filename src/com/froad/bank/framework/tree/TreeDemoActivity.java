@@ -39,6 +39,9 @@ public class TreeDemoActivity extends Activity {
             // 获取树
             GenericTree<TreeNodeData> tree = SingleTreeParser.getInstance().getTree();
             System.out.println(tree.toString());
+            
+            TreeNodeData targetNodeData = new TreeNodeData("A1", "账户管理");
+            System.out.println("A1 == " + tree.search(targetNodeData));
             /**「单树结构」end */
             
             /**「双树结构」begin */

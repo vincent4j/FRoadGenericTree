@@ -126,7 +126,7 @@ public class GenericTreeNode<T> {
 
     @Override
     public String toString() {
-        return "[" + (data == null ? "null" : data.toString()) + "]";
+        return "[" + (data == null ? "null" : data.toString() + children.toString()) + "]";
     }
 
     @Override

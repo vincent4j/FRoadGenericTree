@@ -35,8 +35,8 @@ public class TreeNodeData {
 
         TreeNodeData other = (TreeNodeData) o;
 
-        if (id == other.getId() 
-                && title == other.getTitle()) {
+        if (id.equals(other.getId()) 
+                && title.equals(other.getTitle())) {
             return true;
         }
         
