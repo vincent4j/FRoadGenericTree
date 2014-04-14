@@ -57,7 +57,7 @@ public class GenericTreeNode<T> {
      * 是否是叶子节点
      */
     public boolean isLeaf() {
-        return getChildrenCount() > 0;
+        return getChildrenCount() < 1;
     }
 
     /**
